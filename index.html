@@ -3,83 +3,109 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Bandz Roofing Co. — Trusted Roofing Since 1998</title>
+<title>A1 Roofing — Trusted Local Roofers</title>
+<meta name="description" content="A1 Roofing — experienced local roofers for re-roofs, flat roofs, repairs, chimneys and more. Free quotes, quality workmanship, 5-star reviews.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%23111'/%3E%3Ctext x='32' y='46' font-family='Arial,sans-serif' font-weight='900' font-style='italic' font-size='42' text-anchor='middle'%3E%3Ctspan fill='%23fff'%3EA%3C/tspan%3E%3Ctspan fill='%23FFD200'%3E1%3C/tspan%3E%3C/text%3E%3C/svg%3E">
 <style>
   :root{
-    --ink:#1f2733; --muted:#5b6675; --line:#e6e9ee;
-    --accent:#c0492b; --accent-dark:#9c3a22; --bg:#ffffff; --soft:#f6f7f9;
+    --ink:#141414; --muted:#5d5d5d; --line:#e7e7e7;
+    --yellow:#FFD200; --yellow-dark:#e9c000; --bg:#ffffff; --soft:#f6f6f7; --black:#141414;
   }
   *{box-sizing:border-box}
   html{scroll-behavior:smooth}
   body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55}
-  a{color:inherit}
   img,svg{display:block;max-width:100%}
-  .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+
+  /* Logo */
+  .logo{display:flex;align-items:center;gap:11px;text-decoration:none;color:inherit}
+  .logo .mark{width:46px;height:46px;flex:0 0 auto}
+  .logo .name{font-weight:900;letter-spacing:.5px;font-size:1.2rem;line-height:1}
+  .logo .name span{color:var(--muted);font-weight:700;font-size:.7rem;letter-spacing:.22em;display:block;margin-top:3px;text-transform:uppercase}
 
   /* Header */
-  header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.92);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
-  .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
-  .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.3px;font-size:1.15rem}
-  .brand .mark{width:30px;height:30px}
+  header{position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:72px;gap:18px}
   .nav nav{display:flex;gap:26px}
-  .nav nav a{text-decoration:none;color:var(--muted);font-weight:600;font-size:.95rem}
-  .nav nav a:hover{color:var(--accent)}
-  .btn{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;font-weight:700;padding:11px 18px;border-radius:8px;border:0;cursor:pointer}
-  .btn:hover{background:var(--accent-dark)}
-  .btn.ghost{background:transparent;color:var(--accent);border:2px solid var(--accent);padding:9px 16px}
+  .nav nav a{text-decoration:none;color:var(--ink);font-weight:600;font-size:.95rem}
+  .nav nav a:hover{color:#000;border-bottom:2px solid var(--yellow)}
+  .btn{display:inline-flex;align-items:center;gap:8px;background:var(--yellow);color:#141414;text-decoration:none;font-weight:800;padding:12px 18px;border-radius:8px;border:0;cursor:pointer;font-size:.95rem}
+  .btn:hover{background:var(--yellow-dark)}
+  .btn.dark{background:var(--black);color:#fff}
+  .btn.dark:hover{background:#000}
+  .btn.ghost{background:transparent;border:2px solid #fff;color:#fff;padding:10px 16px}
+  .btn svg{width:18px;height:18px}
 
   /* Hero */
-  .hero{position:relative;color:#fff;overflow:hidden}
+  .hero{position:relative;color:#fff;overflow:hidden;background:#222}
   .hero .bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-  .hero .scrim{position:absolute;inset:0;background:linear-gradient(120deg,rgba(20,28,40,.86),rgba(20,28,40,.45))}
-  .hero .inner{position:relative;padding:96px 0 104px}
-  .hero h1{font-size:clamp(2rem,5vw,3.4rem);line-height:1.08;margin:0 0 16px;max-width:18ch}
-  .hero p{font-size:1.15rem;max-width:52ch;margin:0 0 28px;color:#e8ecf2}
+  .hero .scrim{position:absolute;inset:0;background:linear-gradient(110deg,rgba(15,15,15,.9),rgba(15,15,15,.5))}
+  .hero .inner{position:relative;padding:104px 0 112px}
+  .hero .tag{display:inline-block;background:var(--yellow);color:#141414;font-weight:800;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;padding:6px 12px;border-radius:999px;margin-bottom:18px}
+  .hero h1{font-size:clamp(2.1rem,5.2vw,3.6rem);line-height:1.06;margin:0 0 16px;max-width:20ch}
+  .hero h1 em{font-style:normal;color:var(--yellow)}
+  .hero p{font-size:1.15rem;max-width:54ch;margin:0 0 28px;color:#eaeaea}
   .cta{display:flex;gap:14px;flex-wrap:wrap}
-  .badges{display:flex;gap:28px;flex-wrap:wrap;margin-top:44px;font-size:.92rem;color:#cdd5e0}
-  .badges b{display:block;font-size:1.5rem;color:#fff}
+  .badges{display:flex;gap:34px;flex-wrap:wrap;margin-top:46px}
+  .badges div{font-size:.9rem;color:#cfcfcf}
+  .badges b{display:block;font-size:1.6rem;color:#fff}
+  .badges b em{font-style:normal;color:var(--yellow)}
 
-  section{padding:72px 0}
+  section{padding:76px 0}
   .soft{background:var(--soft)}
-  .eyebrow{text-transform:uppercase;letter-spacing:.14em;font-size:.78rem;font-weight:800;color:var(--accent);margin:0 0 10px}
-  h2{font-size:clamp(1.6rem,3.4vw,2.2rem);margin:0 0 14px}
-  .lead{color:var(--muted);max-width:62ch;font-size:1.05rem}
+  .dark{background:var(--black);color:#fff}
+  .eyebrow{text-transform:uppercase;letter-spacing:.16em;font-size:.78rem;font-weight:800;color:#a98f00;margin:0 0 10px}
+  .dark .eyebrow{color:var(--yellow)}
+  h2{font-size:clamp(1.7rem,3.6vw,2.3rem);margin:0 0 14px}
+  .lead{color:var(--muted);max-width:64ch;font-size:1.05rem}
+  .dark .lead{color:#c9c9c9}
 
-  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:36px}
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:38px}
   .card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:26px}
-  .card .ic{width:42px;height:42px;margin-bottom:14px}
+  .card .ic{width:46px;height:46px;border-radius:10px;background:#fff7cc;display:flex;align-items:center;justify-content:center;margin-bottom:15px}
+  .card .ic svg{width:24px;height:24px}
   .card h3{margin:0 0 8px;font-size:1.15rem}
   .card p{margin:0;color:var(--muted);font-size:.97rem}
 
-  /* Gallery */
-  .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:36px}
-  .shot{border-radius:14px;overflow:hidden;border:1px solid var(--line);background:#fff}
-  .shot svg{width:100%;height:200px}
-  .shot .cap{padding:12px 14px;font-size:.9rem;font-weight:600;color:var(--muted)}
+  /* Carousel */
+  .carousel{position:relative;margin-top:38px}
+  .viewport{overflow:hidden;border-radius:16px}
+  .track{display:flex;transition:transform .45s cubic-bezier(.4,.0,.2,1)}
+  .slide{flex:0 0 100%;position:relative}
+  .work .slide img{width:100%;height:clamp(300px,56vh,600px);object-fit:cover;display:block}
+  .work .slide figcaption{position:absolute;left:0;right:0;bottom:0;padding:46px 22px 18px;color:#fff;font-weight:700;font-size:1.05rem;background:linear-gradient(transparent,rgba(0,0,0,.78))}
+  .reviews .viewport{background:#fff;border:1px solid var(--line)}
+  .reviews .slide{display:flex;justify-content:center;align-items:flex-start;padding:18px}
+  .reviews .slide img{height:min(72vh,640px);width:auto;max-width:100%;object-fit:contain;border-radius:6px}
+  .nav-btn{position:absolute;top:50%;transform:translateY(-50%);width:48px;height:48px;border-radius:50%;border:0;background:var(--yellow);color:#141414;font-size:1.7rem;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(0,0,0,.25);z-index:3}
+  .nav-btn:hover{background:#fff}
+  .nav-btn.prev{left:14px}
+  .nav-btn.next{right:14px}
+  .dots{display:flex;gap:9px;justify-content:center;margin-top:18px}
+  .dots button{width:10px;height:10px;border-radius:50%;border:0;background:#cfcfcf;cursor:pointer;padding:0}
+  .dots button.active{background:var(--yellow);transform:scale(1.25)}
+  .dark .dots button{background:#555}
+  .dark .dots button.active{background:var(--yellow)}
 
   /* Contact */
-  .contact-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;margin-top:36px;align-items:start}
-  .clist{list-style:none;padding:0;margin:0;display:grid;gap:16px}
-  .clist a{display:flex;gap:14px;align-items:center;text-decoration:none;font-weight:600}
-  .clist .ci{flex:0 0 44px;width:44px;height:44px;border-radius:10px;background:#fdeee9;display:flex;align-items:center;justify-content:center}
-  .clist .ci svg{width:22px;height:22px}
-  .clist small{display:block;color:var(--muted);font-weight:500}
-  form{display:grid;gap:12px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px}
-  form label{font-size:.85rem;font-weight:700;color:var(--muted)}
-  form input,form textarea{width:100%;padding:11px 12px;border:1px solid var(--line);border-radius:8px;font:inherit;margin-top:4px}
-  form textarea{min-height:96px;resize:vertical}
+  .contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:36px}
+  .ccard{display:flex;gap:14px;align-items:center;text-decoration:none;color:#fff;background:#1f1f1f;border:1px solid #2c2c2c;border-radius:14px;padding:20px}
+  .ccard:hover{border-color:var(--yellow)}
+  .ccard .ci{flex:0 0 48px;width:48px;height:48px;border-radius:12px;background:var(--yellow);display:flex;align-items:center;justify-content:center}
+  .ccard .ci svg{width:24px;height:24px}
+  .ccard b{display:block;font-size:1.05rem}
+  .ccard small{display:block;color:#b3b3b3;font-weight:500;margin-top:2px}
 
-  footer{background:#141c28;color:#9fb0c4;padding:34px 0;font-size:.9rem}
+  footer{background:#0d0d0d;color:#9a9a9a;padding:34px 0;font-size:.9rem;border-top:3px solid var(--yellow)}
   .footer-row{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;align-items:center}
-  footer .brand{color:#fff;font-size:1rem}
 
   @media(max-width:820px){
     .nav nav{display:none}
-    .grid3,.gallery{grid-template-columns:1fr 1fr}
-    .contact-grid{grid-template-columns:1fr}
+    .grid3{grid-template-columns:1fr 1fr}
   }
-  @media(max-width:520px){
-    .grid3,.gallery{grid-template-columns:1fr}
+  @media(max-width:540px){
+    .grid3{grid-template-columns:1fr}
+    .nav-btn{width:40px;height:40px;font-size:1.4rem}
   }
 </style>
 </head>
@@ -87,46 +113,49 @@
 
 <header>
   <div class="wrap nav">
-    <div class="brand">
-      <svg class="mark" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 5 4 22h6v21h28V22h6L24 5z" fill="#c0492b"/><path d="M24 5 4 22h6L24 11l14 11h6L24 5z" fill="#9c3a22"/></svg>
-      Bandz Roofing Co.
-    </div>
+    <a class="logo" href="#top">
+      <svg class="mark" viewBox="0 0 64 64" aria-hidden="true">
+        <rect width="64" height="64" rx="12" fill="#141414"/>
+        <text x="32" y="46" font-family="Arial,Helvetica,sans-serif" font-weight="900" font-style="italic" font-size="42" text-anchor="middle">
+          <tspan fill="#ffffff">A</tspan><tspan fill="#FFD200">1</tspan>
+        </text>
+      </svg>
+      <span class="name">A1 ROOFING<span>Trusted local roofers</span></span>
+    </a>
     <nav>
       <a href="#about">About</a>
       <a href="#services">Services</a>
-      <a href="#gallery">Our Work</a>
+      <a href="#work">Our Work</a>
+      <a href="#reviews">Reviews</a>
       <a href="#contact">Contact</a>
     </nav>
-    <a class="btn" href="#contact">Free Quote</a>
+    <a class="btn" href="https://wa.me/447815595019" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#141414" stroke-width="2"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 21l2.1-5.3A8.5 8.5 0 1 1 21 11.5z"/></svg>
+      WhatsApp Us
+    </a>
   </div>
 </header>
 
 <!-- Hero -->
-<div class="hero">
-  <svg class="bg" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-    <defs>
-      <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3a4a63"/><stop offset="1" stop-color="#22120f"/></linearGradient>
-    </defs>
-    <rect width="1200" height="600" fill="url(#sky)"/>
-    <g opacity="0.5">
-      <path d="M0 430 L300 300 L600 430 Z" fill="#c0492b"/>
-      <path d="M250 470 L600 280 L950 470 Z" fill="#9c3a22"/>
-      <path d="M650 440 L950 300 L1250 440 Z" fill="#7d2f1c"/>
-    </g>
-  </svg>
+<div class="hero" id="top">
+  <img class="bg" src="images/work-01.jpg" alt="A1 Roofing team installing a new tiled roof">
   <div class="scrim"></div>
   <div class="wrap inner">
-    <h1>Roofs built to last. Backed by a 25-year guarantee.</h1>
-    <p>Family-run roofers serving homes and businesses across the county since 1998. From quick repairs to full re-roofs, we do it right the first time.</p>
+    <span class="tag">★★★★★ Rated by local customers</span>
+    <h1>Quality roofing, <em>done right</em> the first time.</h1>
+    <p>Experienced local roofers for re-roofs, flat roofs, repairs, chimneys and guttering. Tidy, reliable, and fully committed to a job well done.</p>
     <div class="cta">
-      <a class="btn" href="#contact">Get a free inspection</a>
-      <a class="btn ghost" href="#gallery" style="color:#fff;border-color:#fff">See our work</a>
+      <a class="btn" href="https://wa.me/447815595019" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#141414" stroke-width="2"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 21l2.1-5.3A8.5 8.5 0 1 1 21 11.5z"/></svg>
+        Get a free quote
+      </a>
+      <a class="btn ghost" href="#work">See our work</a>
     </div>
     <div class="badges">
-      <div><b>1,200+</b>roofs completed</div>
-      <div><b>25 yr</b>workmanship warranty</div>
-      <div><b>4.9★</b>average review</div>
-      <div><b>24/7</b>emergency call-out</div>
+      <div><b><em>5.0</em>★</b>customer rating</div>
+      <div><b>15+ yrs</b>roofing experience</div>
+      <div><b>Free</b>no-obligation quotes</div>
+      <div><b>Fully</b>insured work</div>
     </div>
   </div>
 </div>
@@ -135,23 +164,23 @@
 <section id="about">
   <div class="wrap">
     <p class="eyebrow">Who we are</p>
-    <h2>A local roofing team you can actually trust</h2>
-    <p class="lead">Bandz Roofing Co. is a fully insured, family-owned roofing contractor based in Riverton. For over two decades we've protected homes and businesses with honest advice, tidy worksites, and craftsmanship that holds up to every season. No call-centres, no pushy sales — just experienced roofers who treat your property like their own.</p>
+    <h2>Your local roofing specialists</h2>
+    <p class="lead">A1 Roofing is a local, family-run roofing team trusted by homeowners across the area. From a single slipped tile to a full re-roof or new flat roof, we turn up when we say we will, work tidily, and finish to a standard we're proud to put our name on. Honest advice, fair pricing, and craftsmanship that lasts.</p>
     <div class="grid3">
       <div class="card">
-        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="#c0492b" stroke-width="2"><path d="M12 2 3 7v6c0 5 4 8 9 9 5-1 9-4 9-9V7l-9-5z"/><path d="m9 12 2 2 4-4"/></svg>
-        <h3>Fully insured & certified</h3>
-        <p>£5m public liability cover and accredited installers on every job, big or small.</p>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#141414" stroke-width="2"><path d="M12 2 3 7v6c0 5 4 8 9 9 5-1 9-4 9-9V7l-9-5z"/><path d="m9 12 2 2 4-4"/></svg></div>
+        <h3>Fully insured</h3>
+        <p>Every job is covered and carried out by skilled, experienced roofers — big or small.</p>
       </div>
       <div class="card">
-        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="#c0492b" stroke-width="2"><path d="M12 2v20M5 9l7-7 7 7"/></svg>
-        <h3>Honest, upfront pricing</h3>
-        <p>Clear written quotes with no hidden extras. What we quote is what you pay.</p>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#141414" stroke-width="2"><path d="M12 1v22M5 8l7-7 7 7"/></svg></div>
+        <h3>Honest pricing</h3>
+        <p>Clear, written quotes with no hidden extras and no surprises. What we quote is what you pay.</p>
       </div>
       <div class="card">
-        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="#c0492b" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
-        <h3>On time, every time</h3>
-        <p>We turn up when we say we will and leave your property spotless when we're done.</p>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#141414" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+        <h3>Reliable &amp; tidy</h3>
+        <p>We show up on time, keep you updated, and leave your property spotless when we're done.</p>
       </div>
     </div>
   </div>
@@ -162,106 +191,134 @@
   <div class="wrap">
     <p class="eyebrow">What we do</p>
     <h2>Our roofing services</h2>
-    <p class="lead">Whatever your roof needs, we've got it covered — pitched, flat, residential or commercial.</p>
+    <p class="lead">Pitched or flat, repair or replacement — whatever your roof needs, we've got it covered.</p>
     <div class="grid3">
-      <div class="card"><h3>Re-roofing & new builds</h3><p>Complete tear-offs and fresh installs in slate, tile, or metal, finished to spec and built to last.</p></div>
-      <div class="card"><h3>Repairs & leak fixing</h3><p>Fast diagnosis and lasting repairs for storm damage, missing tiles, and stubborn leaks.</p></div>
-      <div class="card"><h3>Flat & EPDM roofing</h3><p>Durable rubber and felt systems for extensions, garages, and commercial units.</p></div>
-      <div class="card"><h3>Guttering & fascias</h3><p>uPVC fascias, soffits, and seamless guttering installed and maintained.</p></div>
-      <div class="card"><h3>Chimney & lead work</h3><p>Repointing, flashing, and full chimney rebuilds by time-served craftsmen.</p></div>
-      <div class="card"><h3>Roof inspections</h3><p>Free, no-obligation surveys with a clear photo report and honest recommendations.</p></div>
+      <div class="card"><h3>Tiled &amp; slate re-roofs</h3><p>Full roof replacements and new builds in concrete tile, clay, or natural slate.</p></div>
+      <div class="card"><h3>Flat roofing</h3><p>Long-lasting EPDM rubber and GRP fibreglass systems for extensions, garages and dormers.</p></div>
+      <div class="card"><h3>Roof repairs</h3><p>Fast fixes for slipped or cracked tiles, leaks, and storm damage — done properly first time.</p></div>
+      <div class="card"><h3>Chimney &amp; lead work</h3><p>Repointing, flashing and chimney repairs by experienced, time-served roofers.</p></div>
+      <div class="card"><h3>Guttering &amp; fascias</h3><p>Repairs and replacements to keep water away from your roof and walls.</p></div>
+      <div class="card"><h3>Roof inspections</h3><p>Free, no-obligation checks with honest advice on exactly what your roof needs.</p></div>
     </div>
   </div>
 </section>
 
-<!-- Gallery -->
-<section id="gallery">
+<!-- Work gallery carousel -->
+<section id="work" class="dark">
   <div class="wrap">
     <p class="eyebrow">Our work</p>
     <h2>Recent projects</h2>
-    <p class="lead">A few of the roofs we've completed for happy customers across the region.</p>
-    <div class="gallery">
-      <div class="shot">
-        <svg viewBox="0 0 400 200" preserveAspectRatio="xMidYMid slice"><rect width="400" height="200" fill="#dfe6ee"/><rect y="120" width="400" height="80" fill="#e9ddcf"/><path d="M40 120 L200 40 L360 120 Z" fill="#8a3a25"/><path d="M40 120 L200 40 L360 120" fill="none" stroke="#6e2d1c" stroke-width="3"/><rect x="150" y="130" width="40" height="60" fill="#9c6b47"/><rect x="230" y="135" width="50" height="35" fill="#cfe2f3"/></svg>
-        <div class="cap">Full slate re-roof — Maple Avenue</div>
+    <p class="lead">A selection of roofs we've recently completed for happy customers.</p>
+    <div class="carousel work" data-autoplay="5500">
+      <div class="viewport">
+        <div class="track">
+          <figure class="slide"><img src="images/work-01.jpg" alt="New concrete tile roof installation"><figcaption>New concrete tile roof installation</figcaption></figure>
+          <figure class="slide"><img src="images/work-02.jpg" alt="Full roof replacement, aerial view"><figcaption>Full pitched roof replacement</figcaption></figure>
+          <figure class="slide"><img src="images/work-03.jpg" alt="Interlocking tile re-roof with scaffolding"><figcaption>Interlocking tile re-roof</figcaption></figure>
+          <figure class="slide"><img src="images/work-04.jpg" alt="GRP fibreglass flat roof on a new extension"><figcaption>GRP fibreglass flat roof on a new extension</figcaption></figure>
+          <figure class="slide"><img src="images/work-05.jpg" alt="EPDM rubber flat roof with parapet"><figcaption>EPDM rubber flat roof with parapet detailing</figcaption></figure>
+          <figure class="slide"><img src="images/work-06.jpg" alt="Flat roof and box gutter on a bay extension"><figcaption>Flat roof on a bay extension</figcaption></figure>
+          <figure class="slide"><img src="images/work-07.jpg" alt="Rubber flat roof on a detached garage"><figcaption>Rubber flat roof on a detached garage</figcaption></figure>
+          <figure class="slide"><img src="images/work-08.jpg" alt="Ridge and chimney inspection before repair"><figcaption>Ridge &amp; chimney repair</figcaption></figure>
+          <figure class="slide"><img src="images/work-09.jpg" alt="New OSB roof decking ready for membrane"><figcaption>New roof decking ready for membrane</figcaption></figure>
+        </div>
       </div>
-      <div class="shot">
-        <svg viewBox="0 0 400 200" preserveAspectRatio="xMidYMid slice"><rect width="400" height="200" fill="#cfe0ee"/><rect y="130" width="400" height="70" fill="#dfe7d6"/><path d="M30 130 L160 60 L290 130 Z" fill="#b4502f"/><path d="M260 130 L330 80 L400 130 Z" fill="#9c3a22"/><rect x="120" y="138" width="34" height="52" fill="#7a5236"/></svg>
-        <div class="cap">Clay tile pitched roof — Oakwood Close</div>
+      <button class="nav-btn prev" aria-label="Previous photo">&#8249;</button>
+      <button class="nav-btn next" aria-label="Next photo">&#8250;</button>
+      <div class="dots"></div>
+    </div>
+  </div>
+</section>
+
+<!-- Reviews carousel -->
+<section id="reviews">
+  <div class="wrap">
+    <p class="eyebrow">Don't just take our word for it</p>
+    <h2>5-star customer reviews</h2>
+    <p class="lead">Real reviews from real customers we've helped.</p>
+    <div class="carousel reviews" data-autoplay="6500">
+      <div class="viewport">
+        <div class="track">
+          <figure class="slide"><img src="images/review-1.jpg" alt="Five star customer reviews for A1 Roofing"></figure>
+          <figure class="slide"><img src="images/review-2.jpg" alt="Five star customer reviews for A1 Roofing"></figure>
+          <figure class="slide"><img src="images/review-3.jpg" alt="Five star customer reviews for A1 Roofing"></figure>
+          <figure class="slide"><img src="images/review-4.jpg" alt="Five star customer reviews for A1 Roofing"></figure>
+          <figure class="slide"><img src="images/review-5.jpg" alt="Five star customer reviews for A1 Roofing"></figure>
+        </div>
       </div>
-      <div class="shot">
-        <svg viewBox="0 0 400 200" preserveAspectRatio="xMidYMid slice"><rect width="400" height="200" fill="#e4e9ee"/><rect y="110" width="400" height="90" fill="#d9d2c7"/><rect x="60" y="60" width="280" height="50" fill="#4b5560"/><rect x="60" y="56" width="280" height="8" fill="#2f363f"/><rect x="90" y="115" width="60" height="40" fill="#bcd3e8"/><rect x="250" y="115" width="60" height="40" fill="#bcd3e8"/></svg>
-        <div class="cap">Commercial flat EPDM roof — Unit 7</div>
-      </div>
-      <div class="shot">
-        <svg viewBox="0 0 400 200" preserveAspectRatio="xMidYMid slice"><rect width="400" height="200" fill="#d7e3ef"/><rect y="125" width="400" height="75" fill="#e7dccd"/><path d="M50 125 L200 55 L350 125 Z" fill="#7c4a2d"/><rect x="250" y="30" width="34" height="55" fill="#8a3a25"/><path d="M246 36 L267 22 L288 36 Z" fill="#5e2a1a"/></svg>
-        <div class="cap">Chimney rebuild & flashing — Hill Rise</div>
-      </div>
-      <div class="shot">
-        <svg viewBox="0 0 400 200" preserveAspectRatio="xMidYMid slice"><rect width="400" height="200" fill="#cdd9e6"/><rect y="120" width="400" height="80" fill="#dde6d4"/><path d="M20 120 L140 55 L260 120 Z" fill="#a8482b"/><path d="M180 120 L300 65 L400 120 Z" fill="#8a3a25"/><rect y="118" width="400" height="6" fill="#3a4754"/></svg>
-        <div class="cap">New build twin-gable roof — Bramble Lane</div>
-      </div>
-      <div class="shot">
-        <svg viewBox="0 0 400 200" preserveAspectRatio="xMidYMid slice"><rect width="400" height="200" fill="#e1e7ed"/><rect y="128" width="400" height="72" fill="#ead9c6"/><path d="M60 128 L200 50 L340 128 Z" fill="#5a6470"/><path d="M60 128 L200 50 L340 128" fill="none" stroke="#3a424c" stroke-width="3"/><rect x="300" y="70" width="50" height="40" fill="#f2c66b"/></svg>
-        <div class="cap">Storm repair & solar-ready roof — Elm Court</div>
-      </div>
+      <button class="nav-btn prev" aria-label="Previous review">&#8249;</button>
+      <button class="nav-btn next" aria-label="Next review">&#8250;</button>
+      <div class="dots"></div>
     </div>
   </div>
 </section>
 
 <!-- Contact -->
-<section id="contact" class="soft">
+<section id="contact" class="dark">
   <div class="wrap">
     <p class="eyebrow">Get in touch</p>
     <h2>Free quotes, no obligation</h2>
-    <p class="lead">Call, email, or send us a message and we'll arrange a free roof inspection — usually within 48 hours.</p>
+    <p class="lead">Message us on WhatsApp or give us a call — we'll be happy to arrange a free roof inspection.</p>
     <div class="contact-grid">
-      <ul class="clist">
-        <li>
-          <a href="tel:+441234567890">
-            <span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="#c0492b" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L8 9.6a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2z"/></svg></span>
-            <span>01234 567 890<small>Mon–Sat, 7am–7pm</small></span>
-          </a>
-        </li>
-        <li>
-          <a href="mailto:hello@bandzroofing.co.uk">
-            <span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="#c0492b" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>
-            <span>hello@bandzroofing.co.uk<small>We reply within one working day</small></span>
-          </a>
-        </li>
-        <li>
-          <a href="https://maps.google.com/?q=12+Trade+Yard+Riverton" target="_blank" rel="noopener">
-            <span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="#c0492b" stroke-width="2"><path d="M12 22s-8-5.7-8-12a8 8 0 0 1 16 0c0 6.3-8 12-8 12z"/><circle cx="12" cy="10" r="3"/></svg></span>
-            <span>12 Trade Yard, Riverton RV1 2AB<small>Open for visits by appointment</small></span>
-          </a>
-        </li>
-        <li>
-          <a href="https://wa.me/441234567890" target="_blank" rel="noopener">
-            <span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="#c0492b" stroke-width="2"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 21l2.1-5.3A8.5 8.5 0 1 1 21 11.5z"/></svg></span>
-            <span>Message us on WhatsApp<small>Quick questions welcome</small></span>
-          </a>
-        </li>
-      </ul>
-      <form onsubmit="event.preventDefault();this.reset();alert('Thanks! This is a demo form — in a live site your message would be sent to our team.');">
-        <div><label for="n">Name</label><input id="n" type="text" placeholder="Your name" required></div>
-        <div><label for="e">Email or phone</label><input id="e" type="text" placeholder="How can we reach you?" required></div>
-        <div><label for="m">What do you need?</label><textarea id="m" placeholder="Tell us about your roof…"></textarea></div>
-        <button class="btn" type="submit">Request my free quote</button>
-      </form>
+      <a class="ccard" href="https://wa.me/447815595019" target="_blank" rel="noopener">
+        <span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="#141414" stroke-width="2"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 21l2.1-5.3A8.5 8.5 0 1 1 21 11.5z"/></svg></span>
+        <span><b>WhatsApp us</b><small>+44 7815 595019 — quickest reply</small></span>
+      </a>
+      <a class="ccard" href="tel:+447815595019">
+        <span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="#141414" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L8 9.6a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2z"/></svg></span>
+        <span><b>Call us</b><small>07815 595019 — Mon–Sat</small></span>
+      </a>
     </div>
   </div>
 </section>
 
 <footer>
   <div class="wrap footer-row">
-    <div class="brand">
-      <svg class="mark" style="width:24px;height:24px" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 5 4 22h6v21h28V22h6L24 5z" fill="#c0492b"/></svg>
-      Bandz Roofing Co.
-    </div>
-    <div>© 1998–2026 Bandz Roofing Co. · Fully insured · Riverton &amp; surrounding areas</div>
-    <div>This is a demo website.</div>
+    <a class="logo" href="#top" style="color:#fff">
+      <svg class="mark" style="width:34px;height:34px" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="12" fill="#222"/><text x="32" y="46" font-family="Arial,Helvetica,sans-serif" font-weight="900" font-style="italic" font-size="42" text-anchor="middle"><tspan fill="#ffffff">A</tspan><tspan fill="#FFD200">1</tspan></text></svg>
+      <span style="font-weight:900;letter-spacing:.5px">A1 ROOFING</span>
+    </a>
+    <div>© 2026 A1 Roofing · Fully insured · Free quotes</div>
+    <div>WhatsApp / Call: +44 7815 595019</div>
   </div>
 </footer>
+
+<script>
+  document.querySelectorAll('.carousel').forEach(function(root){
+    var track = root.querySelector('.track');
+    var slides = Array.prototype.slice.call(root.querySelectorAll('.slide'));
+    var dotsWrap = root.querySelector('.dots');
+    var i = 0, n = slides.length;
+    var dots = slides.map(function(_, idx){
+      var b = document.createElement('button');
+      b.setAttribute('aria-label', 'Go to slide ' + (idx + 1));
+      b.addEventListener('click', function(){ go(idx); });
+      dotsWrap.appendChild(b);
+      return b;
+    });
+    function render(){
+      track.style.transform = 'translateX(' + (-i * 100) + '%)';
+      dots.forEach(function(d, idx){ d.classList.toggle('active', idx === i); });
+    }
+    function go(idx){ i = (idx + n) % n; render(); reset(); }
+    root.querySelector('.next').addEventListener('click', function(){ go(i + 1); });
+    root.querySelector('.prev').addEventListener('click', function(){ go(i - 1); });
+    var delay = parseInt(root.getAttribute('data-autoplay'), 10) || 0;
+    var timer = null;
+    function reset(){ if (delay){ clearInterval(timer); timer = setInterval(function(){ go(i + 1); }, delay); } }
+    root.addEventListener('mouseenter', function(){ clearInterval(timer); });
+    root.addEventListener('mouseleave', reset);
+    var x0 = null;
+    root.addEventListener('touchstart', function(e){ x0 = e.touches[0].clientX; }, {passive:true});
+    root.addEventListener('touchend', function(e){
+      if (x0 === null) return;
+      var dx = e.changedTouches[0].clientX - x0;
+      if (Math.abs(dx) > 40){ go(i + (dx < 0 ? 1 : -1)); }
+      x0 = null;
+    });
+    render(); reset();
+  });
+</script>
 
 </body>
 </html>
