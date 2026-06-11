@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>A1 Roofing — Trusted Local Roofers</title>
 <meta name="description" content="A1 Roofing — experienced local roofers for re-roofs, flat roofs, repairs, chimneys and more. Free quotes, quality workmanship, 5-star reviews.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%23111'/%3E%3Ctext x='32' y='46' font-family='Arial,sans-serif' font-weight='900' font-style='italic' font-size='42' text-anchor='middle'%3E%3Ctspan fill='%23fff'%3EA%3C/tspan%3E%3Ctspan fill='%23FFD200'%3E1%3C/tspan%3E%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23141414'/%3E%3Ctext x='6' y='50' font-family='Georgia,serif' font-weight='700' font-style='italic' font-size='46' fill='%23ffffff'%3EA%3C/text%3E%3Ctext x='36' y='50' font-family='Georgia,serif' font-weight='700' font-style='italic' font-size='46' fill='%23FFD200'%3E1%3C/text%3E%3C/svg%3E">
 <style>
   :root{
     --ink:#141414; --muted:#5d5d5d; --line:#e7e7e7;
@@ -19,7 +19,7 @@
 
   /* Logo */
   .logo{display:flex;align-items:center;gap:11px;text-decoration:none;color:inherit}
-  .logo .mark{width:46px;height:46px;flex:0 0 auto}
+  .logo .mark{width:auto;height:44px;flex:0 0 auto}
   .logo .name{font-weight:900;letter-spacing:.5px;font-size:1.2rem;line-height:1}
   .logo .name span{color:var(--muted);font-weight:700;font-size:.7rem;letter-spacing:.22em;display:block;margin-top:3px;text-transform:uppercase}
 
@@ -69,14 +69,14 @@
 
   /* Carousel */
   .carousel{position:relative;margin-top:38px}
-  .viewport{overflow:hidden;border-radius:16px}
-  .track{display:flex;transition:transform .45s cubic-bezier(.4,.0,.2,1)}
-  .slide{flex:0 0 100%;position:relative}
+  .viewport{display:flex;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;scroll-behavior:smooth;border-radius:16px;scrollbar-width:none;-ms-overflow-style:none}
+  .viewport::-webkit-scrollbar{display:none}
+  .slide{flex:0 0 100%;width:100%;max-width:100%;min-width:100%;scroll-snap-align:center;scroll-snap-stop:always;position:relative;margin:0}
   .work .slide img{width:100%;height:clamp(300px,56vh,600px);object-fit:cover;display:block}
   .work .slide figcaption{position:absolute;left:0;right:0;bottom:0;padding:46px 22px 18px;color:#fff;font-weight:700;font-size:1.05rem;background:linear-gradient(transparent,rgba(0,0,0,.78))}
   .reviews .viewport{background:#fff;border:1px solid var(--line)}
-  .reviews .slide{display:flex;justify-content:center;align-items:flex-start;padding:18px}
-  .reviews .slide img{height:min(72vh,640px);width:auto;max-width:100%;object-fit:contain;border-radius:6px}
+  .reviews .slide{display:grid;place-items:center;padding:20px;min-height:440px}
+  .reviews .slide img{max-height:min(72vh,640px);max-width:100%;width:auto;object-fit:contain;border-radius:6px}
   .nav-btn{position:absolute;top:50%;transform:translateY(-50%);width:48px;height:48px;border-radius:50%;border:0;background:var(--yellow);color:#141414;font-size:1.7rem;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(0,0,0,.25);z-index:3}
   .nav-btn:hover{background:#fff}
   .nav-btn.prev{left:14px}
@@ -114,11 +114,9 @@
 <header>
   <div class="wrap nav">
     <a class="logo" href="#top">
-      <svg class="mark" viewBox="0 0 64 64" aria-hidden="true">
-        <rect width="64" height="64" rx="12" fill="#141414"/>
-        <text x="32" y="46" font-family="Arial,Helvetica,sans-serif" font-weight="900" font-style="italic" font-size="42" text-anchor="middle">
-          <tspan fill="#ffffff">A</tspan><tspan fill="#FFD200">1</tspan>
-        </text>
+      <svg class="mark" viewBox="0 0 86 60" aria-hidden="true">
+        <text x="-1" y="51" font-family="Georgia,'Times New Roman',serif" font-weight="700" font-style="italic" font-size="62" fill="#141414">A</text>
+        <text x="44" y="51" font-family="Georgia,'Times New Roman',serif" font-weight="700" font-style="italic" font-size="62" fill="#FFD200" stroke="#141414" stroke-width="1.6" paint-order="stroke">1</text>
       </svg>
       <span class="name">A1 ROOFING<span>Trusted local roofers</span></span>
     </a>
@@ -211,17 +209,15 @@
     <p class="lead">A selection of roofs we've recently completed for happy customers.</p>
     <div class="carousel work" data-autoplay="5500">
       <div class="viewport">
-        <div class="track">
-          <figure class="slide"><img src="images/work-01.jpg" alt="New concrete tile roof installation"><figcaption>New concrete tile roof installation</figcaption></figure>
-          <figure class="slide"><img src="images/work-02.jpg" alt="Full roof replacement, aerial view"><figcaption>Full pitched roof replacement</figcaption></figure>
-          <figure class="slide"><img src="images/work-03.jpg" alt="Interlocking tile re-roof with scaffolding"><figcaption>Interlocking tile re-roof</figcaption></figure>
-          <figure class="slide"><img src="images/work-04.jpg" alt="GRP fibreglass flat roof on a new extension"><figcaption>GRP fibreglass flat roof on a new extension</figcaption></figure>
-          <figure class="slide"><img src="images/work-05.jpg" alt="EPDM rubber flat roof with parapet"><figcaption>EPDM rubber flat roof with parapet detailing</figcaption></figure>
-          <figure class="slide"><img src="images/work-06.jpg" alt="Flat roof and box gutter on a bay extension"><figcaption>Flat roof on a bay extension</figcaption></figure>
-          <figure class="slide"><img src="images/work-07.jpg" alt="Rubber flat roof on a detached garage"><figcaption>Rubber flat roof on a detached garage</figcaption></figure>
-          <figure class="slide"><img src="images/work-08.jpg" alt="Ridge and chimney inspection before repair"><figcaption>Ridge &amp; chimney repair</figcaption></figure>
-          <figure class="slide"><img src="images/work-09.jpg" alt="New OSB roof decking ready for membrane"><figcaption>New roof decking ready for membrane</figcaption></figure>
-        </div>
+        <figure class="slide"><img src="images/work-01.jpg" alt="New concrete tile roof installation"><figcaption>New concrete tile roof installation</figcaption></figure>
+        <figure class="slide"><img src="images/work-02.jpg" alt="Full roof replacement, aerial view"><figcaption>Full pitched roof replacement</figcaption></figure>
+        <figure class="slide"><img src="images/work-03.jpg" alt="Interlocking tile re-roof with scaffolding"><figcaption>Interlocking tile re-roof</figcaption></figure>
+        <figure class="slide"><img src="images/work-04.jpg" alt="GRP fibreglass flat roof on a new extension"><figcaption>GRP fibreglass flat roof on a new extension</figcaption></figure>
+        <figure class="slide"><img src="images/work-05.jpg" alt="EPDM rubber flat roof with parapet"><figcaption>EPDM rubber flat roof with parapet detailing</figcaption></figure>
+        <figure class="slide"><img src="images/work-06.jpg" alt="Flat roof and box gutter on a bay extension"><figcaption>Flat roof on a bay extension</figcaption></figure>
+        <figure class="slide"><img src="images/work-07.jpg" alt="Rubber flat roof on a detached garage"><figcaption>Rubber flat roof on a detached garage</figcaption></figure>
+        <figure class="slide"><img src="images/work-08.jpg" alt="Ridge and chimney inspection before repair"><figcaption>Ridge &amp; chimney repair</figcaption></figure>
+        <figure class="slide"><img src="images/work-09.jpg" alt="New OSB roof decking ready for membrane"><figcaption>New roof decking ready for membrane</figcaption></figure>
       </div>
       <button class="nav-btn prev" aria-label="Previous photo">&#8249;</button>
       <button class="nav-btn next" aria-label="Next photo">&#8250;</button>
@@ -238,13 +234,11 @@
     <p class="lead">Real reviews from real customers we've helped.</p>
     <div class="carousel reviews" data-autoplay="6500">
       <div class="viewport">
-        <div class="track">
-          <figure class="slide"><img src="images/review-1.jpg" alt="Five star customer reviews for A1 Roofing"></figure>
-          <figure class="slide"><img src="images/review-2.jpg" alt="Five star customer reviews for A1 Roofing"></figure>
-          <figure class="slide"><img src="images/review-3.jpg" alt="Five star customer reviews for A1 Roofing"></figure>
-          <figure class="slide"><img src="images/review-4.jpg" alt="Five star customer reviews for A1 Roofing"></figure>
-          <figure class="slide"><img src="images/review-5.jpg" alt="Five star customer reviews for A1 Roofing"></figure>
-        </div>
+        <figure class="slide"><img src="images/review-1.jpg" alt="Five star customer reviews for A1 Roofing"></figure>
+        <figure class="slide"><img src="images/review-2.jpg" alt="Five star customer reviews for A1 Roofing"></figure>
+        <figure class="slide"><img src="images/review-3.jpg" alt="Five star customer reviews for A1 Roofing"></figure>
+        <figure class="slide"><img src="images/review-4.jpg" alt="Five star customer reviews for A1 Roofing"></figure>
+        <figure class="slide"><img src="images/review-5.jpg" alt="Five star customer reviews for A1 Roofing"></figure>
       </div>
       <button class="nav-btn prev" aria-label="Previous review">&#8249;</button>
       <button class="nav-btn next" aria-label="Next review">&#8250;</button>
@@ -275,7 +269,7 @@
 <footer>
   <div class="wrap footer-row">
     <a class="logo" href="#top" style="color:#fff">
-      <svg class="mark" style="width:34px;height:34px" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="12" fill="#222"/><text x="32" y="46" font-family="Arial,Helvetica,sans-serif" font-weight="900" font-style="italic" font-size="42" text-anchor="middle"><tspan fill="#ffffff">A</tspan><tspan fill="#FFD200">1</tspan></text></svg>
+      <svg class="mark" style="width:auto;height:34px" viewBox="0 0 86 60" aria-hidden="true"><text x="-1" y="51" font-family="Georgia,'Times New Roman',serif" font-weight="700" font-style="italic" font-size="62" fill="#ffffff">A</text><text x="44" y="51" font-family="Georgia,'Times New Roman',serif" font-weight="700" font-style="italic" font-size="62" fill="#FFD200" stroke="#0d0d0d" stroke-width="1.6" paint-order="stroke">1</text></svg>
       <span style="font-weight:900;letter-spacing:.5px">A1 ROOFING</span>
     </a>
     <div>© 2026 A1 Roofing · Fully insured · Free quotes</div>
@@ -285,7 +279,7 @@
 
 <script>
   document.querySelectorAll('.carousel').forEach(function(root){
-    var track = root.querySelector('.track');
+    var vp = root.querySelector('.viewport');
     var slides = Array.prototype.slice.call(root.querySelectorAll('.slide'));
     var dotsWrap = root.querySelector('.dots');
     var i = 0, n = slides.length;
@@ -296,27 +290,33 @@
       dotsWrap.appendChild(b);
       return b;
     });
-    function render(){
-      track.style.transform = 'translateX(' + (-i * 100) + '%)';
-      dots.forEach(function(d, idx){ d.classList.toggle('active', idx === i); });
+    function paintDots(){ dots.forEach(function(d, idx){ d.classList.toggle('active', idx === i); }); }
+    function go(idx){
+      i = (idx + n) % n;
+      vp.scrollTo({ left: i * vp.clientWidth, behavior: 'smooth' });
+      paintDots(); reset();
     }
-    function go(idx){ i = (idx + n) % n; render(); reset(); }
     root.querySelector('.next').addEventListener('click', function(){ go(i + 1); });
     root.querySelector('.prev').addEventListener('click', function(){ go(i - 1); });
+
+    // Keep active dot in sync when the user scrolls/swipes natively
+    var st = null;
+    vp.addEventListener('scroll', function(){
+      clearTimeout(st);
+      st = setTimeout(function(){
+        var idx = Math.round(vp.scrollLeft / vp.clientWidth);
+        if (idx !== i){ i = idx; paintDots(); }
+      }, 90);
+    }, {passive:true});
+
     var delay = parseInt(root.getAttribute('data-autoplay'), 10) || 0;
     var timer = null;
     function reset(){ if (delay){ clearInterval(timer); timer = setInterval(function(){ go(i + 1); }, delay); } }
     root.addEventListener('mouseenter', function(){ clearInterval(timer); });
     root.addEventListener('mouseleave', reset);
-    var x0 = null;
-    root.addEventListener('touchstart', function(e){ x0 = e.touches[0].clientX; }, {passive:true});
-    root.addEventListener('touchend', function(e){
-      if (x0 === null) return;
-      var dx = e.changedTouches[0].clientX - x0;
-      if (Math.abs(dx) > 40){ go(i + (dx < 0 ? 1 : -1)); }
-      x0 = null;
-    });
-    render(); reset();
+    window.addEventListener('resize', function(){ vp.scrollLeft = i * vp.clientWidth; });
+
+    paintDots(); reset();
   });
 </script>
 
